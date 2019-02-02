@@ -8,14 +8,7 @@
 
 session_start();
 
-const DB_CONFIG = array(
-    'mysql' => array(
-        'host' => '127.0.0.1',
-        'username'=> 'lesley',
-        'password'=> 'lesley',
-        'db'=> 'calendar-dev'
-    )
-);
+require_once "global.setting.php";
 
 spl_autoload_register(function($class){
     require_once 'models/'. $class .'.php';
