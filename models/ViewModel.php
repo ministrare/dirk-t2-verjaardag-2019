@@ -18,6 +18,11 @@ class ViewModel
     // Variable for the title of the web page
     private $sPageTitle = 'Dirk Vrancken, Verjaardags playlist';
 
+
+    /**
+     * ViewModel constructor.
+     * @param null $titel
+     */
     public function __construct($titel = NULL)
     {
         // Adjust the page title if necessary

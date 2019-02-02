@@ -6,12 +6,16 @@
  * Time: 10:30
  */
 
+ini_set('display_errors', 'on');
+define('APP_ROOT', __DIR__);
+define('BASE_URL', 'http://localdev.dirk:8080/');
+
 session_start();
 
 require_once "global.setting.php";
 
 spl_autoload_register(function($class){
-    require_once 'models/'. $class .'.php';
+    require_once '../'. $class .'.php';
 });
 
 require_once "../controllers/HomeController.php";

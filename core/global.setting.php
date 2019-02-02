@@ -6,6 +6,7 @@
  * Time: 10:55
  */
 
+// @TODO: Change to correct settings
 const DB_CONFIG = array(
     'mysql' => array(
         'host' => '127.0.0.1',

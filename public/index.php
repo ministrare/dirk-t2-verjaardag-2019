@@ -7,10 +7,10 @@ include_once '../core/init.php';
  */
 
 if(isset($_GET['action']) && $_GET['action'] != "") {
-    /*if($_GET['action'] == "new_post") {
-        $postController = new postController();
-        $postController->create();
-    }*/
+    if($_GET['action'] == "user") {
+        $postController = new Controllers\HomeController();
+        $postController->user();
+    }
 } else {
     $homeController = new Controllers\HomeController();
     $homeController->index();

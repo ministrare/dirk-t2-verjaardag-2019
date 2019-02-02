@@ -8,9 +8,10 @@ use Models\ViewModel;
 class HomeController {
 
     public function index() {
-        //include_once "../views/login/login.form.php";
-        $oView = new ViewModel();
 
-        echo 'Test';
+        $oView = new ViewModel();
+        echo __DIR__;
+        include_once '../views/login/login.form.php';
     }
+
 }
