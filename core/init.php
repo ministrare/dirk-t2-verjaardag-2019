@@ -7,18 +7,22 @@
  */
 
 ini_set('display_errors', 'on');
+
 define('APP_ROOT', __DIR__);
 define('BASE_URL', 'http://localdev.dirk:8080/');
 
+$requestURL = isset($_SERVER["REQUEST_URI"]) ? "$_SERVER[REQUEST_URI]": '';
+define("REQUEST_PAGE", $requestURL);
+
 session_start();
 
-require_once "global.setting.php";
+require_once "db.config.php";
 
 spl_autoload_register(function($class){
     require_once '../'. $class .'.php';
 });
 
-require_once "../controllers/HomeController.php";
+require_once "../controllers/ViewController.php";
 //require_once "../controllers/LoginController.php";
 //require_once "../controllers/AdminController.php";
 
