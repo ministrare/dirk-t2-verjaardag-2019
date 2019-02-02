@@ -2,26 +2,18 @@
 
 include_once '../core/init.php';
 
+$router = new Models\Router(new Models\Request);
+
+
 /**
  * Dispatching the world
  */
+$router->get('/', function() {
+    $controller = new Controllers\LoginViewController();
+    $controller->index();
+});
 
-
-REQUEST_PAGE;
-
-switch (REQUEST_PAGE){
-    case '/':
-        $homeController = new Controllers\LoginViewController();
-        $homeController->index();
-    break;
-
-    case '/users' || '/users/':
-        $homeController = new Controllers\LoginViewController();
-        $homeController->index();
-        break;
-
-    default:
-        $viewController = new Controllers\ViewController();
-        $viewController->page_404();
-    break;
-}
+$router->get('/users', function() {
+    $controller = new Controllers\LoginViewController();
+    $controller->users();
+});

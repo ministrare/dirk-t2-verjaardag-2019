@@ -15,4 +15,11 @@ class LoginViewController extends ViewController
 
         include_once '../views/login/login.form.php';
     }
+
+    public function users() {
+
+       echo 'Userspage';
+    }
+
+
 }

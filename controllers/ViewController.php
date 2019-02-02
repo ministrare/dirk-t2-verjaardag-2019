@@ -7,9 +7,9 @@ use Models\ViewModel;
 class ViewController {
     private $oViewModel;
 
-    public function __construct()
+    public function __construct($titel= NULL)
     {
-        $this->oViewModel = new ViewModel();
+        $this->oViewModel = new ViewModel($titel);
     }
 
     public function page_404() {
